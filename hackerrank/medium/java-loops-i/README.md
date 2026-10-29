@@ -1,4 +1,4 @@
-# Java Loops I
+# Java Loops II
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -28,7 +28,7 @@ Print $10$ lines of output; each line $i$ (where $1 \le i \le 10$) contains the 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-29T10:24:40.351Z  
+**Submitted:** 2026-10-29T10:42:33.303Z  
 
 ```java
 import java.util.Scanner;
@@ -37,10 +37,21 @@ public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int N = sc.nextInt();
+        int q = sc.nextInt();
 
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(N + " x " + i + " = " + (N * i));
+        for (int i = 0; i < q; i++) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int n = sc.nextInt();
+
+            int sum = a;
+
+            for (int j = 0; j < n; j++) {
+                sum += (int) Math.pow(2, j) * b;
+                System.out.print(sum + " ");
+            }
+
+            System.out.println();
         }
 
         sc.close();
